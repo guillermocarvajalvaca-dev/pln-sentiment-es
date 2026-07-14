@@ -1,4 +1,5 @@
 # Observatorio de Opiniones de E-commerce en Español
+**Repositorio:** https://github.com/guillermocarvajalvaca-dev/pln-sentiment-es
 **Proyecto Final — Módulo de PLN · Maestría en IA**
 
 ---
