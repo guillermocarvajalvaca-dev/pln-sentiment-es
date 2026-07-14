@@ -1,0 +1,35 @@
+{
+  "model": "GRU",
+  "accuracy": 0.6362,
+  "precision_macro": 0.6444,
+  "recall_macro": 0.6362,
+  "f1_macro": 0.6391,
+  "f1_weighted": 0.6391,
+  "f1_per_class": {
+    "NEGATIVO": 0.6575,
+    "NEUTRO": 0.5297,
+    "POSITIVO": 0.73
+  },
+  "inference_time_s": 0.001098,
+  "confusion_matrix": [
+    [
+      311,
+      163,
+      24
+    ],
+    [
+      115,
+      281,
+      104
+    ],
+    [
+      22,
+      117,
+      361
+    ]
+  ],
+  "training_epochs": 20,
+  "max_vocab_size": 20000,
+  "max_length": 72,
+  "device": "GPU Colab T4"
+}

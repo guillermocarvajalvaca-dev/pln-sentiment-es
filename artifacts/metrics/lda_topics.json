@@ -1,0 +1,62 @@
+{
+  "topic_0": [
+    "bien",
+    "precio",
+    "hace",
+    "mas",
+    "cumple",
+    "bastante",
+    "calidad",
+    "mal",
+    "función",
+    "queda"
+  ],
+  "topic_1": [
+    "bien",
+    "funciona",
+    "luz",
+    "dos",
+    "batería",
+    "buena",
+    "bastante",
+    "problema",
+    "puede",
+    "carga"
+  ],
+  "topic_2": [
+    "calidad",
+    "buena",
+    "precio",
+    "producto",
+    "buen",
+    "bien",
+    "calidad precio",
+    "buena calidad",
+    "esperaba",
+    "foto"
+  ],
+  "topic_3": [
+    "producto",
+    "llegado",
+    "llegó",
+    "caja",
+    "día",
+    "amazon",
+    "pedido",
+    "puedo",
+    "vendedor",
+    "dos"
+  ],
+  "topic_4": [
+    "bien",
+    "pantalla",
+    "vez",
+    "queda",
+    "poner",
+    "funciona",
+    "fácil",
+    "cristal",
+    "protector",
+    "funda"
+  ]
+}

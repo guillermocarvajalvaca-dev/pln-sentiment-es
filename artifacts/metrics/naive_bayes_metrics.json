@@ -1,0 +1,31 @@
+{
+  "model": "Naive Bayes",
+  "accuracy": 0.6362,
+  "precision_macro": 0.6431,
+  "recall_macro": 0.6362,
+  "f1_macro": 0.6388,
+  "f1_weighted": 0.6388,
+  "f1_per_class": {
+    "NEGATIVO": 0.6578,
+    "NEUTRO": 0.5451,
+    "POSITIVO": 0.7135
+  },
+  "inference_time_s": 0.0,
+  "confusion_matrix": [
+    [
+      321,
+      151,
+      26
+    ],
+    [
+      117,
+      287,
+      96
+    ],
+    [
+      40,
+      115,
+      345
+    ]
+  ]
+}

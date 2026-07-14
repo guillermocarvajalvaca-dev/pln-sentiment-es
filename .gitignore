@@ -1,0 +1,22 @@
+# Entorno virtual
+.venv/
+
+# Dataset crudo (37 MB — descargar con load_dataset)
+data/raw/
+
+# SavedModel GRU (demasiado grande para GitHub)
+artifacts/models/gru_sentiment_savedmodel/
+
+# Archivos temporales Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# IDEs
+.idea/
+*.iml

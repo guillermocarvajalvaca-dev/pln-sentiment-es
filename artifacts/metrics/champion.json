@@ -1,0 +1,7 @@
+{
+  "champion": "GRU",
+  "f1_macro_nb": 0.6388,
+  "f1_macro_gru": 0.6391,
+  "nb_device": "CPU local",
+  "gru_device": "GPU Colab T4"
+}
