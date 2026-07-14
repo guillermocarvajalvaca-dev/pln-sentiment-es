@@ -60,7 +60,7 @@ Champion: GRU — embeddings preentrenados en español fueron determinantes.
 
 4. Lanzar la interfaz (solo local):
    python src/app/gradio_app.py
-   Abrir en navegador: http://127.0.0.1:7860
+   Abrir en navegador: http://localhost:7860
 
 ---
 
