@@ -1,6 +1,5 @@
 # Observatorio de Opiniones de E-commerce en Español
-**Proyecto Final — Módulo de PLN · Maestría en IA · UCB "San Pablo"**
-**Entrega:** 13/07/2026 · **Autor:** Guillermo Carvajal Vaca
+**Proyecto Final — Módulo de PLN · Maestría en IA**
 
 ---
 
@@ -15,16 +14,16 @@ y compara dos enfoques: Naive Bayes (clásico) vs. GRU (neuronal).
 
 | Modelo | F1 macro |
 |---|---|
-| Naive Bayes (champion) | 0.6388 |
-| GRU | 0.5181 |
+| Naive Bayes | 0.6388 |
+| GRU + FastText (champion) | 0.6391 |
 
-Champion: Naive Bayes — el contexto vence a la moda (Clase 12).
+Champion: GRU — embeddings preentrenados en español fueron determinantes.
 
 ---
 
 ## Dataset
 - Fuente: SetFit/amazon_reviews_multi_es (Hugging Face Hub)
-- Muestra balanceada: 9.000 train · 1.500 validation · 998 test
+- Muestra balanceada: 9.000 train · 1.500 validation · ~1.000 test
 - Mapeo: 1-2 estrellas NEGATIVO · 3 estrellas NEUTRO · 4-5 estrellas POSITIVO
 
 ---
@@ -32,8 +31,8 @@ Champion: Naive Bayes — el contexto vence a la moda (Clase 12).
 ## Decisiones técnicas
 - NB sobre LogReg: la consigna exige Naive Bayes explícitamente
 - GRU sobre Transformer: factibilidad en el plazo disponible
-- CPU sobre GPU: TF 2.15 incompatible con CUDA 13.3
-- max_vocab=10.000 y max_length=35: criterio OC-02, percentil 75
+- CPU local + GPU Colab: entrenamiento GRU en Colab T4
+- max_vocab=20.000 y max_length=72: percentil 95 del corpus
 
 ---
 
@@ -44,15 +43,6 @@ Champion: Naive Bayes — el contexto vence a la moda (Clase 12).
 4. Sin sentimiento por aspecto
 5. Sin Transformer afinado
 6. Interfaz local sin despliegue
-
----
-
-## Versiones principales
-- tensorflow==2.15.1
-- gradio==4.44.1
-- scikit-learn==1.9.0
-- pandas==2.3.3
-- numpy==1.26.4
 
 ---
 
@@ -68,23 +58,23 @@ Champion: Naive Bayes — el contexto vence a la moda (Clase 12).
 3. Entrenar todos los modelos:
    python main.py
 
-4. Lanzar la interfaz:
+4. Lanzar la interfaz (solo local):
    python src/app/gradio_app.py
-   Abrir en el navegador: http://127.0.0.1:7860
+   Abrir en navegador: http://127.0.0.1:7860
 
 ---
 
 ## Estructura del proyecto
 
-config/settings.py         configuración central del proyecto
-data/raw/                  dataset crudo descargado de Hugging Face
-data/processed/            CSV balanceado 11.998 registros
-artifacts/                 modelos vectorizadores métricas y figuras
+config/settings.py         configuración central
+data/raw/                  dataset crudo (descargado por el pipeline)
+data/processed/            CSV balanceado (generado por el pipeline)
+artifacts/                 modelos, vectorizadores, métricas y figuras
 src/data/                  carga y validación del dataset
-src/preprocessing/         pipelines por rama classic neural lda
-src/models/                Naive Bayes GRU LDA
+src/preprocessing/         pipelines por rama (classic, neural, lda)
+src/models/                Naive Bayes, GRU, LDA
 src/evaluation/            métricas y gráficos
 src/inference/             predictor de inferencia
-src/app/                   interfaz Gradio
+src/app/                   interfaz Gradio (localhost únicamente)
 main.py                    entrenamiento end-to-end
 requirements.txt           dependencias del proyecto
